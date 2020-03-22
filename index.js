@@ -36,6 +36,7 @@ const fs = require('fs');
                     }
                 });
 
+                await driver.wait(until.elementLocated(By.id("band_sidebar")));
                 const logo = await driver.findElements(By.id("logo"));
                 if (logo.length > 0) {
                     const href = await logo[0].getAttribute("href");
